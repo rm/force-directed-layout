@@ -15,10 +15,28 @@
 			#canvas {
 				float: left;
 			}
-			#log {
+			#panel {
 				margin-left: 1em;
 				float: left;
-				width: 150px;
+				width: 200px;
+			}
+			#panel .title {
+				background-color: gray;
+				color: white;
+				padding: 0.5em;
+				font-weight: bold;
+			}
+			#panel .section {
+				background-color: green;
+				color: white;
+				padding-top: 0.5em;
+				margin-bottom: 0.5em;
+			}
+			#options input {
+				margin-bottom: 1em;
+			}
+			#log {
+				width: 200px;
 				height: 350px;
 				overflow: auto;
 				background-color: green;
@@ -29,8 +47,23 @@
 		<script type="text/javascript" src="force-directed-layout.js"></script>
 	</head>
 	<body>
-		<canvas id="canvas" width="800" height="600"></canvas>
-		<div id="log">
+		<canvas id="canvas" width="700" height="600"></canvas>
+		<div id="panel">
+			<div class="title">Options</div>
+			<div class="section" id="options">
+				<input type="checkbox" id="showforces">Show forces</input>
+				<br/>
+				<input type="checkbox" id="autolayout">Auto layout</input>
+				<br/>
+				<input type="checkbox" id="pinondrag">Pin on drag</input>
+			</div>
+<!--
+			<div class="title">Log Window</div>
+			<div class="section">
+				<div id="log">
+				</div>
+			</div>
+-->
 		</div>
 	</body>
 </html>

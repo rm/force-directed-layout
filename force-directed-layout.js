@@ -348,12 +348,14 @@ function drawAll() {
 			color = color.subtract(rgba(30,0,0,0));
 		drawRect(p, node.width, node.height, color);
 	}
-	var forceColor = rgba(0, 0, 200, 0.2);
-	for (var i = 0; i < allNodes.length; ++i) {
-		var node = allNodes[i];
-		var pa = node.center;
-		var pb = pa.add(node.force);
-		drawLine(pa, pb, 1, forceColor);
+	if ($("#showforces").attr("checked")) {
+		var forceColor = rgba(0, 0, 200, 0.2);
+		for (var i = 0; i < allNodes.length; ++i) {
+			var node = allNodes[i];
+			var pa = node.center;
+			var pb = pa.add(node.force);
+			drawLine(pa, pb, 1, forceColor);
+		}
 	}
 }
 
@@ -377,9 +379,11 @@ function init() {
 	drawAll();
 	
 	function update() {
-		for (var i = 0; i < 10; ++i) {
-			computeForces();
-			moveNodes();
+		if ($("#autolayout").attr("checked")) {
+			for (var i = 0; i < 10; ++i) {
+				computeForces();
+				moveNodes();
+			}
 		}
 		computeForces();
 		drawAll();
@@ -432,7 +436,7 @@ function init() {
 		}
 		return false;
 	}).mouseup(function (ev) {
-		var wasDragging = dragging;
+		var pinDragged = dragging && $("#pinondrag").attr("checked");
 		mouseDown = false;
 		dragging = false;
 		var p = canvasPoint(ev);
@@ -440,7 +444,7 @@ function init() {
 			var node = allNodes[i];
 			if (node.mouseDown) {
 				node.mouseDown = false;
-				if (wasDragging)
+				if (pinDragged)
 					node.pinned = true;
 			}
 		}
