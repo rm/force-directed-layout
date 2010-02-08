@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Force directed layout</title>
+<!-- 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"> -->
+		<script type="text/javascript" src="jquery.min.js">
+		</script>
+		<style type="text/css">
+			body {
+				font-family: Verdana;
+				font-size: 10pt;
+				background-color: lightgray;
+			}
+			#canvas {
+				float: left;
+			}
+			#log {
+				margin-left: 1em;
+				float: left;
+				width: 150px;
+				height: 350px;
+				overflow: auto;
+				background-color: green;
+				color: white;
+				font-family: monospace;
+			}
+		</style>
+		<script type="text/javascript" src="force-directed-layout.js"></script>
+	</head>
+	<body>
+		<canvas id="canvas" width="800" height="600"></canvas>
+		<div id="log">
+		</div>
+	</body>
+</html>
