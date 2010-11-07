@@ -1,69 +1,69 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Force directed layout</title>
-<!-- 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"> -->
-		<script type="text/javascript" src="jquery.min.js">
-		</script>
-		<style type="text/css">
-			body {
-				font-family: Verdana;
-				font-size: 10pt;
-				background-color: lightgray;
-			}
-			#canvas {
-				float: left;
-			}
-			#panel {
-				margin-left: 1em;
-				float: left;
-				width: 200px;
-			}
-			#panel .title {
-				background-color: gray;
-				color: white;
-				padding: 0.5em;
-				font-weight: bold;
-			}
-			#panel .section {
-				background-color: green;
-				color: white;
-				padding-top: 0.5em;
-				margin-bottom: 0.5em;
-			}
-			#options input {
-				margin-bottom: 1em;
-			}
-			#log {
-				width: 200px;
-				height: 350px;
-				overflow: auto;
-				background-color: green;
-				color: white;
-				font-family: monospace;
-			}
-		</style>
-		<script type="text/javascript" src="force-directed-layout.js"></script>
-	</head>
-	<body>
-		<canvas id="canvas" width="700" height="600"></canvas>
-		<div id="panel">
-			<div class="title">Options</div>
-			<div class="section" id="options">
-				<input type="checkbox" id="showforces">Show forces</input>
-				<br/>
-				<input type="checkbox" id="autolayout">Auto layout</input>
-				<br/>
-				<input type="checkbox" id="pinondrag">Pin on drag</input>
-			</div>
-<!--
-			<div class="title">Log Window</div>
-			<div class="section">
-				<div id="log">
-				</div>
-			</div>
--->
-		</div>
-	</body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Force directed layout</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js">
+    <!-- <script type="text/javascript" src="jquery.min.js"> -->
+    </script>
+    <style type="text/css">
+      body {
+          font-family: Verdana;
+          font-size: 10pt;
+          background-color: lightgray;
+      }
+      #canvas {
+          float: left;
+      }
+      #panel {
+          margin-left: 1em;
+          float: left;
+          width: 200px;
+      }
+      #panel .title {
+          background-color: gray;
+          color: white;
+          padding: 0.5em;
+          font-weight: bold;
+      }
+      #panel .section {
+          background-color: green;
+          color: white;
+          padding-top: 0.5em;
+          margin-bottom: 0.5em;
+      }
+      #options input {
+          margin-bottom: 1em;
+      }
+      #log {
+          width: 200px;
+          height: 350px;
+          overflow: auto;
+          background-color: green;
+          color: white;
+          font-family: monospace;
+      }
+    </style>
+    <script type="text/javascript" src="force-directed-layout.js"></script>
+  </head>
+  <body>
+    <canvas id="canvas" width="700" height="600"></canvas>
+    <div id="panel">
+      <div class="title">Options</div>
+      <div class="section" id="options">
+	<input type="checkbox" id="showforces">Show forces</input>
+	<br/>
+	<input type="checkbox" id="autolayout">Auto layout</input>
+	<br/>
+	<input type="checkbox" id="pinondrag">Pin on drag</input>
+      </div>
+      <!--
+	 <div class="title">Log Window</div>
+	 <div class="section">
+	   <div id="log">
+	   </div>
+	 </div>
+         -->
+    </div>
+  </body>
 </html>
